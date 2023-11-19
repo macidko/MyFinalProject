@@ -21,43 +21,14 @@ namespace WebAPI.Controllers
             _productService = productService;
         }
 
-        [HttpGet("getall")]
-        public IActionResult Get()
+        [HttpGet]
+        public List<Product> Get()
         {
-            //Swagger
             //hiçbir katman diğerini newlemiyor. somut katmanlar üzerinden gidilmemeli.
             //Dependency chain -- bağımlılık zinciri
             var result = _productService.GetAll();
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
+            return result.Data;
             //System.InvalidOperationException: Unable to resolve service for type 'Business.Abstracts.IProductService'
-
-
-        }
-
-        [HttpGet("getbyid")]
-        public IActionResult Get(int id)
-        {
-            var result = _productService.GetById(id);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpPost("add")]
-        public IActionResult Post(Product product)
-        {
-            var result = _productService.Add(product);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
         }
     }
 }

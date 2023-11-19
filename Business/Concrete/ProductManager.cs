@@ -47,10 +47,9 @@ namespace Business.Concrete
 
             //InMemoryProductDal inMemoryProductDal = new InMemoryProductDal();
 
-            if (DateTime.Now.Hour == 10)
+            if (DateTime.Now.Hour == 16)
             {
                 //return new ErrorResult();
-                //Exception
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
