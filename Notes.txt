@@ -1,0 +1,13 @@
+Constant: Sabit, proje sabitleri. Metin, enum vs
+Statik: sürekli newlememek için statik yazýlýr. statik olanlar newlenmez. direkt yazýlýr.
+
+-Publicler PascalCase yazýlýr.
+
+
+
+
+
+
+
+
+***generics tekrar et!
