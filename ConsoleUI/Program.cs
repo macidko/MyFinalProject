@@ -15,7 +15,13 @@ namespace ConsoleUI
             //ProductTest();
             //CategoryTest();
             //ProductDetailTest();
+            //DataResultTest();
 
+
+        }
+
+        private static void DataResultTest()
+        {
             ProductManager productManager = new ProductManager(new EfProductDal());
             var result = productManager.GetProductDetails();
             if (result.Success == true)
@@ -30,7 +36,6 @@ namespace ConsoleUI
             {
                 Console.WriteLine(result.Message);
             }
-
         }
 
         //private static void ProductDetailTest()

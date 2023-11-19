@@ -19,5 +19,7 @@ namespace Business.Abstracts
         //void Add(Product product);
         IResult Add(Product product);
 
+        //RESTFUL --> HTTP --> 
+        //istekleri api controller karşılar.
     }
 }

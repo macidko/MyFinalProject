@@ -2,7 +2,9 @@ Constant: Sabit, proje sabitleri. Metin, enum vs
 Statik: sürekli newlememek için statik yazýlýr. statik olanlar newlenmez. direkt yazýlýr.
 
 -Publicler PascalCase yazýlýr.
-
+--loosely coupled -- gevþek baðlýlýk
+--dependency chain
+--IoC Container -- Inversion of Control
 
 
 
